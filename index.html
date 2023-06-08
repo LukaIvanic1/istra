@@ -12,25 +12,31 @@
 <body>
     <div id="PageHeader1"
         style="position:absolute;text-align:left;left:0px;top:0px;width:100%;height:10%;z-index:7777;">
-        <div id="wb_Text1"
-            style="position:absolute;left:40%;top:20%;text-align:center;z-index:0;">
-            <span
-                style="color:#000000;font-family:Verdana;font-size:53px;letter-spacing:1.07px;"><strong>WEATHER</strong></span>
-        </div>
+        <b><h1>WEATHER</h1></b>
     </div>
+
+
     
-    <div id="wb_Image1" style="position:absolute;left:45px;top:129px;width:730px;height:730px;z-index:3;">
+    <div id="wb_Image1" style="float: inline-start;width:40%px;height:40%px;z-index:3;margin-top: 6%;margin-left: 2.5%;">
         <img src="http://www.vrijeme.hr/kompozit-stat.png" id="Image1" alt="Radar" title="Radar" width="730" height="678">
+        <div id="wb_Text2" style="position:absolute;left:318px;width:250px;height:45px;z-index:4;">
+            <span style="color:#000000;font-family:Verdana;font-size:37px;"><strong>RADAR</strong></span>
+        </div>
+    
     </div>
-    <div id="wb_Text2" style="position:absolute;left:318px;top:880px;width:250px;height:45px;z-index:4;">
-        <span style="color:#000000;font-family:Verdana;font-size:37px;"><strong>RADAR</strong></span>
-    </div>
-    <div id="weather-widget" style="position:absolute;left:1118px;top:321px;width:250px;height:15px;z-index:5;">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <div id="weather-widget" style="float:right;margin-top: 2%;margin-right: 5%;">
         <span style="color:#000000;font-family:Arial;font-size:13px;">weather in buje</span>
         <p>
             Loading...
         </p>
     </div>
+    
 
     <script>
         // Fetch weather data from Open-Meteo API
@@ -48,11 +54,11 @@
       
             // Update the widget with the weather information
             weatherWidget.innerHTML = `
-              <h2>Weather in Buje, Croatia</h2>
-              <p>Temperature: ${temperature}°C</p>
-              <p>Humidity: ${humidity}%</p>
-              <p>Apparent Temperature: ${apparentTemperature}°C</p>
-              <p>Precipitation Probability: ${precipitationProbability}%</p>
+              <h2 style="font-family: Arial;font-weight: bold;font-size: 32px;">Weather in Buje, Croatia</h2>
+              <p style="font-family: Arial;font-weight: bold;font-size: 20px;">Temperature: ${temperature}°C</p>
+              <p style="font-family: Arial;font-weight: bold;font-size: 20px;">Humidity: ${humidity}%</p>
+              <p style="font-family: Arial;font-weight: bold;font-size: 20px;">Apparent Temperature: ${apparentTemperature}°C</p>
+              <p style="font-family: Arial;font-weight: bold;font-size: 20px;">Precipitation Probability: ${precipitationProbability}%</p>
             `;
           })
           .catch(error => {
